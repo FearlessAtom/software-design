@@ -1,0 +1,14 @@
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/obj/Debug/net8.0/something.GeneratedMSBuildEditorConfig.editorconfig
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/obj/Debug/net8.0/something.AssemblyInfoInputs.cache
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/obj/Debug/net8.0/something.AssemblyInfo.cs
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/obj/Debug/net8.0/something.csproj.CoreCompileInputs.cache
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/bin/Debug/net8.0/something
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/bin/Debug/net8.0/something.deps.json
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/bin/Debug/net8.0/something.runtimeconfig.json
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/bin/Debug/net8.0/something.dll
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/bin/Debug/net8.0/something.pdb
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/obj/Debug/net8.0/something.dll
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/obj/Debug/net8.0/refint/something.dll
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/obj/Debug/net8.0/something.pdb
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/obj/Debug/net8.0/something.genruntimeconfig.cache
+/home/fearlessatom/Projects/SoftwareDesign/SoftwareDesignLab1/obj/Debug/net8.0/ref/something.dll
