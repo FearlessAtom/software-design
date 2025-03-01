@@ -49,13 +49,6 @@ public class Number
         double b_double = b.ToDouble();
 
         return (a_double + b_double).ToNumber();
-
-       // a.WholePart = a.WholePart + b.WholePart;
-
-       // a.WholePart = a.WholePart + ((a.FractionalPart + b.FractionalPart) / 100);
-       // a.FractionalPart = (a.FractionalPart + b.FractionalPart) % 100;
-
-       // return a;
     }
 
     public static Number operator -(Number a, Number b)
@@ -63,28 +56,46 @@ public class Number
         double a_double = a.ToDouble();
         double b_double = b.ToDouble();
 
+        if (b_double > a_double)
+        {
+            return 0.0.ToNumber();
+        }
+
         return (a_double - b_double).ToNumber();
+    }
 
-       // if (a.WholePart < b.WholePart || (a.WholePart == b.WholePart && b.FractionalPart > a.FractionalPart))
-       // {
-       //     a.WholePart = a.FractionalPart = 0;
-       //     return a;
-       // }
+    public static Number operator *(Number a, Number b)
+    {
+        double a_double = a.ToDouble();
+        double b_double = b.ToDouble();
 
-       // a.WholePart = a.WholePart - b.WholePart;
-       // a.WholePart = a.WholePart - (b.FractionalPart > a.FractionalPart ? 1 : 0);
+        return (a_double * b_double).ToNumber();
+    }
 
-       // if (a.FractionalPart >= b.FractionalPart)
-       // {
-       //     a.FractionalPart = a.FractionalPart - b.FractionalPart;
-       // }
+    public static Number operator +(Number a, double b)
+    {
+        double a_double = a.ToDouble();
 
-       // else 
-       // {
-       //     a.FractionalPart = 100 - Math.Abs(a.FractionalPart - b.FractionalPart);
-       // }
+        if (b > a_double)
+        {
+            return 0.0.ToNumber();
+        }
 
-       // return a;
+        return (a_double + b).ToNumber();
+    }
+
+    public static Number operator -(Number a, double b)
+    {
+        double a_double = a.ToDouble();
+
+        return (a_double - b).ToNumber();
+    }
+
+    public static Number operator *(Number a, double b)
+    {
+        double a_double = a.ToDouble();
+
+        return (a_double * b).ToNumber();
     }
 
     public static Number operator +(Number a, int b)
@@ -92,16 +103,13 @@ public class Number
         return a + (double)b;
     }
 
-    public static Number operator +(Number a, double b)
+    public static Number operator -(Number a, int b)
     {
-        int WholePart = (int)b;
-        int FractionalPart = (int)((b - (double)WholePart) * 100);
+        return a - (double)b;
+    }
 
-        a.WholePart = a.WholePart + WholePart;
-
-        a.WholePart = a.WholePart + ((a.FractionalPart + FractionalPart) / 100);
-        a.FractionalPart = (a.FractionalPart + FractionalPart) % 100;
-
-        return a;
+    public static Number operator *(Number a, int b)
+    {
+        return a * (double)b;
     }
 }

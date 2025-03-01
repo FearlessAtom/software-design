@@ -5,52 +5,62 @@ namespace something;
 public class Money
 {
     public Number Count { get; set; } = new Number();
-    public Currency Currency { get; set; } = new Currency();
+    public ICurrency Currency { get; set; }
 
-    public Money(int WholePart = 0, int FractionalPart = 0, string Symbol = "", string Code = "")
-    {
-        this.Count.SetWholePart(WholePart);
-        this.Count.SetFractionalPart(FractionalPart);
-
-        this.Currency.Symbol = Symbol;
-        this.Currency.Code = Code;
-    }
-
-    public Money(Number Count, Currency Currency)
+    public Money(Number Count, ICurrency Currency)
     {
         this.Count.SetWholePart(Count.WholePart);
         this.Count.SetFractionalPart(Count.FractionalPart);
 
-        this.Currency.Symbol = Currency.Symbol;
-        this.Currency.Code = Currency.Code;
+        this.Currency = Currency;
     }
 
     public Money(Number Count)
     {
-        
         this.Count.SetWholePart(Count.WholePart);
         this.Count.SetFractionalPart(Count.FractionalPart);
+
+        this.Currency = new CurrencyDirector().BuildDollars(new CurrencyBuilder());
     }
 
     public void Display()
     {
         double Output = this.Count.ToDouble();
-
         string FormattedOutput = Output.ToString("N2", new CultureInfo("fr-FR"));
 
         Console.WriteLine(this.Currency.Symbol + FormattedOutput);
     }
 
+    public void DisplayDollars()
+    {
+        double Output = this.Count.ToDouble() * this.Currency.ToDollarRatio;
+        string FormattedOutput = Output.ToString("N2", new CultureInfo("fr-FR"));
+
+        Console.WriteLine("$" + FormattedOutput);
+    }
+
+    public double ToDollars()
+    {
+        return this.Count.ToDouble() * this.Currency.ToDollarRatio;
+    }
+
     public static Money operator +(Money a, Money b)
     {
-        a.Count = a.Count + b.Count;
+        double a_dollars = a.ToDollars();
+        double b_dollars = b.ToDollars();
+
+        a.Count = (((a_dollars + b_dollars) / a.Currency.ToDollarRatio)).ToNumber();
 
         return a;
     }
 
     public static Money operator -(Money a, Money b)
     {
-        a.Count = a.Count - b.Count;
+        double a_dollars = a.ToDollars();
+        double b_dollars = b.ToDollars();
+
+        a.Count = (((a_dollars - b_dollars) / a.Currency.ToDollarRatio)).ToNumber();
+
         return a;
     }
 }
