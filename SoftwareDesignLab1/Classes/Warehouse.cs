@@ -12,8 +12,14 @@ public class Warehouse
     public override string ToString()
     {
         return string.Join("\n",
-                Items.ConvertAll(item => $"{item.Product.Name} - {item.Quanity} {item.Unit}, " +
-                $"(Total cost: {item.GetTotalCostString()}) Last supply: {item.LastRestock}"));
+            Items.ConvertAll(item => 
+                $"{item.Product.Name} - {item.Quanity} {item.Unit}, " +
+                $"(Total cost: {item.GetTotalCostString()}" +
+                (item.Product is IDiscountable discountable && discountable.Discount != 0 
+                    ? $" (Discounted: {"$" + (discountable.ApplyDiscount() * item.Quanity):0.00})"
+                    : "") + ")" +
+                $" Last supply: {item.LastRestock}"
+        ));
     }
 
     public void AddProduct(WarehouseItem Item)

@@ -2,12 +2,12 @@
 
 public class WarehouseItem
 {
-    public Product Product { get; set; }
+    public IProduct Product { get; set; }
     public string Unit { get; set; }
     public int Quanity { get; set; }
     public DateTime LastRestock { get; set; }
 
-    public WarehouseItem(Product Product, string Unit, int Quanity, DateTime? LastRestock = null)
+    public WarehouseItem(IProduct Product, string Unit, int Quanity, DateTime? LastRestock = null)
     {
         this.Product = Product;
         this.Unit = Unit;

@@ -63,4 +63,22 @@ public class Money
 
         return a;
     }
+
+    public static Money operator *(Money a, double b)
+    {
+        double a_dollars = a.ToDollars();
+
+        a.Count = (a_dollars * b).ToNumber();
+
+        return a;
+    }
+
+    public static Money operator /(Money a, double b)
+    {
+        double a_dollars = a.ToDollars();
+
+        a.Count = (a_dollars / b).ToNumber();
+
+        return a;
+    }
 }
