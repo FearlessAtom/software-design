@@ -32,8 +32,9 @@ public class Program
         Warehouse Warehouse = new Warehouse();
         Reporting Reporting = new Reporting(Warehouse);
 
-        Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(3), Dollars), "Bread").SetDiscount(5),
-                        "Loafs", 16, new DateTime(2024, 2, 15)));
+        Reporting.RegisterArrival(new WarehouseItem(
+                    new DiscountableProduct(new Money(new Number(3), Dollars), "Bread").SetDiscount(5),
+                    "Loafs", 16, new DateTime(2024, 2, 15)));
 
         Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(2), Dollars), "Water"),
                     "Half a gallon", 33, new DateTime(2024, 1, 10)));
@@ -44,13 +45,15 @@ public class Program
         Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(5), Euros), "Cheese"),
                     "Blocks", 20, new DateTime(2024, 2, 20)));
 
-        Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(6), Euros), "Butter").SetDiscount(10),
+        Reporting.RegisterArrival(new WarehouseItem(
+                    new DiscountableProduct(new Money(new Number(6), Euros), "Butter").SetDiscount(10),
                     "Packs", 18, new DateTime(2024, 1, 25)));
 
         Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(15), Euros), "Wine"),
                     "Bottles", 12, new DateTime(2024, 3, 1)));
 
-        Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(500), Yen), "Sushi").SetDiscount(3),
+        Reporting.RegisterArrival(new WarehouseItem(
+                    new DiscountableProduct(new Money(new Number(500), Yen), "Sushi").SetDiscount(3),
                     "Plates", 10, new DateTime(2024, 2, 5)));
 
         Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(700), Yen), "Ramen"),
@@ -68,7 +71,8 @@ public class Program
         Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(8), Pounds), "Coffee"),
                     "Jars", 28, new DateTime(2024, 3, 3)));
 
-        Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(35), Hryvnias), "Water").SetDiscount(20),
+        Reporting.RegisterArrival(new WarehouseItem(
+                    new DiscountableProduct(new Money(new Number(35), Hryvnias), "Water").SetDiscount(20),
                     "2 Liter", 50, new DateTime(2024, 2, 18)));
 
         Reporting.RegisterArrival(new WarehouseItem(new Product(new Money(new Number(50), Hryvnias), "Chocolate"),

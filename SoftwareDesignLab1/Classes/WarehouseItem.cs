@@ -17,11 +17,15 @@ public class WarehouseItem
 
     public string GetTotalCostDollarsString()
     {
-        return "$" + (Product.Cost.ToDollars() * Quanity).ToString().Replace(".", ",");
+        double Result = Product.Cost.ToDollars() * Quanity;
+
+        return "$" + (Result).ToString().Replace(".", ",");
     }
 
     public string GetTotalCostString()
     {
-        return Product.Cost.Currency.Symbol + (Product.Cost.Count.ToDouble() * Quanity).ToString().Replace(".", ",");
+        double Result = Product.Cost.Count.ToDouble() * Quanity;
+
+        return (Result).ToString().Replace(".", ",");
     }
 }

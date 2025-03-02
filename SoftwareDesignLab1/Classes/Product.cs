@@ -1,10 +1,9 @@
 ﻿namespace something;
 
-public class Product : IProduct, IDiscountable
+public class Product : IProduct
 {
     public string Name { get; set; }
     public Money Cost { get; set; }
-    public int Discount { get; set; }
 
     public Product(Money Cost, string Name)
     {
@@ -35,16 +34,5 @@ public class Product : IProduct, IDiscountable
         }
 
         this.Cost = this.Cost - Money;
-    }
-
-    public double ApplyDiscount()
-    {
-        return (this.Cost.Count.ToDouble() / 100.0) * (100.0 - (double)Discount);
-    }
-
-    public IProduct SetDiscount(int Discount)
-    {
-        this.Discount = Discount;
-        return this;
     }
 }

@@ -15,7 +15,7 @@ public class Warehouse
             Items.ConvertAll(item => 
                 $"{item.Product.Name} - {item.Quanity} {item.Unit}, " +
                 $"(Total cost: {item.GetTotalCostString()}" +
-                (item.Product is IDiscountable discountable && discountable.Discount != 0 
+                (item.Product is IDiscountable discountable && discountable.Discount != 0
                     ? $" (Discounted: {"$" + (discountable.ApplyDiscount() * item.Quanity):0.00})"
                     : "") + ")" +
                 $" Last supply: {item.LastRestock}"
