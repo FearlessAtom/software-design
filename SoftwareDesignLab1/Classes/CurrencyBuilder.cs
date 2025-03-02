@@ -2,7 +2,7 @@
 
 public class CurrencyBuilder : ICurrencyBuilder
 {
-    private Currency _Currency = new Currency();
+    private ICurrency _Currency = new Currency();
 
 
     public ICurrencyBuilder SetCode(string Code)
@@ -23,9 +23,9 @@ public class CurrencyBuilder : ICurrencyBuilder
         return this;
     }
 
-    public Currency Build()
+    public ICurrency Build()
     {
-        Currency Currency = this._Currency;
+        ICurrency Currency = this._Currency;
 
         this._Currency = new Currency();
 

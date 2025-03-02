@@ -26,6 +26,6 @@ public class WarehouseItem
     {
         double Result = Product.Cost.Count.ToDouble() * Quanity;
 
-        return (Result).ToString().Replace(".", ",");
+        return Product.Cost.Currency.Symbol + (Result).ToString().Replace(".", ",");
     }
 }

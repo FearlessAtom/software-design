@@ -8,5 +8,5 @@ public interface ICurrencyBuilder
 
     ICurrencyBuilder SetToDollarRatio(double ToDollarRatio);
 
-    Currency Build();
+    ICurrency Build();
 }

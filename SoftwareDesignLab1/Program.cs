@@ -7,11 +7,12 @@ public class Program
         CurrencyBuilder Builder = new CurrencyBuilder();
         CurrencyDirector Director = new CurrencyDirector();
 
-        Currency Dollars = Director.BuildDollars(Builder);
-        Currency Euros = Director.BuildEuros(Builder);
-        Currency Yen = Director.BuildYen(Builder);
-        Currency Pounds = Director.BuildPounds(Builder);
-        Currency Hryvnias = Director.BuildHryvnias(Builder);
+        ICurrency Dollars = Director.BuildDollars(Builder);
+        ICurrency Euros = Director.BuildEuros(Builder);
+        ICurrency Yen = Director.BuildYen(Builder);
+        ICurrency Pounds = Director.BuildPounds(Builder);
+        ICurrency Hryvnias = Director.BuildHryvnias(Builder);
+
 
         Money a = new Money(new Number(200), Hryvnias);
         Money b = new Money(new Number(2), Dollars);

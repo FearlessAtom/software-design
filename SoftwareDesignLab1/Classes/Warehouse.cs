@@ -16,7 +16,7 @@ public class Warehouse
                 $"{item.Product.Name} - {item.Quanity} {item.Unit}, " +
                 $"(Total cost: {item.GetTotalCostString()}" +
                 (item.Product is IDiscountable discountable && discountable.Discount != 0
-                    ? $" (Discounted: {"$" + (discountable.ApplyDiscount() * item.Quanity):0.00})"
+                    ? $" (${(discountable.ApplyDiscount() * item.Quanity):F2})"
                     : "") + ")" +
                 $" Last supply: {item.LastRestock}"
         ));
