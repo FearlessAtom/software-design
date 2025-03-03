@@ -72,6 +72,19 @@ public class Number
         return (a_double * b_double).ToNumber();
     }
 
+    public static Number operator /(Number a, Number b)
+    {
+        double a_double = a.ToDouble();
+        double b_double = b.ToDouble();
+
+        if (a_double == 0)
+        {
+            return a;
+        }
+
+        return (a_double * b_double).ToNumber();
+    }
+
     public static Number operator +(Number a, double b)
     {
         double a_double = a.ToDouble();
@@ -98,6 +111,18 @@ public class Number
         return (a_double * b).ToNumber();
     }
 
+    public static Number operator /(Number a, double b)
+    {
+        if (b == 0)
+        {
+            return a;
+        }
+
+        double a_double = a.ToDouble();
+
+        return (a_double / b).ToNumber();
+    }
+
     public static Number operator +(Number a, int b)
     {
         return a + (double)b;
@@ -111,5 +136,10 @@ public class Number
     public static Number operator *(Number a, int b)
     {
         return a * (double)b;
+    }
+
+    public static Number operator /(Number a, int b)
+    {
+        return a / (double)b;
     }
 }
