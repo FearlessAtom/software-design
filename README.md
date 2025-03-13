@@ -1,1 +1,1 @@
-[lab1](https://github.com/FearlessAtom/software-design/tree/lab1)
+[main branch](https://github.com/FearlessAtom/software-design/)
