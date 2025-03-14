@@ -7,7 +7,7 @@ class IProneSmartphone : Smartphone
         this.Type = "Smartphone";
         this.Model = "IProne";
         this.Price = 1000;
-        this.Manifacturer = "Apple";
+        this.Manufacturer = "Apple";
         this.OperatingSystem = "IOS";
         this.ScreenSize = 6.1;
     }

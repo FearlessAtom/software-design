@@ -7,7 +7,7 @@ class KiaomiLaptop : Laptop
         this.Type = "Laptop";
         this.Model = "RedmiBook";
         this.Price = 800;
-        this.Manifacturer = "Kiaomi";
+        this.Manufacturer = "Kiaomi";
         this.OperatingSystem = "Windows 11";
         this.ScreenSize = 15.6;
     }

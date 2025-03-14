@@ -7,7 +7,7 @@ class IProneEBook : EBook
         this.Type = "EBook";
         this.Model = "IBook";
         this.Price = 300;
-        this.Manifacturer = "Apple";
+        this.Manufacturer = "Apple";
         this.OperatingSystem = "MacOS";
         this.ScreenSize = 12.0;
     }

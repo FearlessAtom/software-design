@@ -7,7 +7,7 @@ class BalaxySmartphone : Smartphone
         this.Type = "Smartphone";
         this.Model = "Balaxy";
         this.Price = 400;
-        this.Manifacturer = "Samsung";
+        this.Manufacturer = "Samsung";
         this.OperatingSystem = "Android";
         this.ScreenSize = 6.5;
     }

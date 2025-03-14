@@ -7,7 +7,7 @@ class BalaxyLaptop : Laptop
         this.Type = "Laptop";
         this.Model = "BalaxyBook";
         this.Price = 800;
-        this.Manifacturer = "Samsung";
+        this.Manufacturer = "Samsung";
         this.OperatingSystem = "Windows 11";
         this.ScreenSize = 16;
     }

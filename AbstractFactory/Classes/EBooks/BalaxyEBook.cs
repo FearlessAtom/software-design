@@ -7,7 +7,7 @@ class BalaxyEBook : EBook
         this.Type = "EBook";
         this.Model = "BalaxyEBook";
         this.Price = 100;
-        this.Manifacturer = "Samsung";
+        this.Manufacturer = "Samsung";
         this.OperatingSystem = "Linux";
         this.ScreenSize = 10.0;
     }

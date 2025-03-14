@@ -7,7 +7,7 @@ class KiaomiSmartphone : Smartphone
         this.Type = "Smartphone";
         this.Model = "POCO";
         this.Price = 390;
-        this.Manifacturer = "Kiaomi";
+        this.Manufacturer = "Kiaomi";
         this.OperatingSystem = "Android";
         this.ScreenSize = 6.7;
     }

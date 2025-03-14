@@ -7,7 +7,7 @@ class IProneNetbook : Netbook
         this.Type = "NetBook";
         this.Model = "INetBook";
         this.Price = 500;
-        this.Manifacturer = "Apple";
+        this.Manufacturer = "Apple";
         this.OperatingSystem = "MacOS";
         this.ScreenSize = 12.0;
     }

@@ -7,7 +7,7 @@ class BalaxyNetbook : Netbook
         this.Type = "Netbook";
         this.Model = "BalaxyTab";
         this.Price = 450;
-        this.Manifacturer = "Samsung";
+        this.Manufacturer = "Samsung";
         this.OperatingSystem = "Windows11";
         this.ScreenSize = 9.5;
     }

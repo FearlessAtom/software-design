@@ -7,7 +7,7 @@ class KiaomiEBook : EBook
         this.Type = "EBook";
         this.Model = "RedmiBook";
         this.Price = 90;
-        this.Manifacturer = "Kiaomi";
+        this.Manufacturer = "Kiaomi";
         this.OperatingSystem = "Linux";
         this.ScreenSize = 10.0;
     }

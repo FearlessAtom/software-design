@@ -7,7 +7,7 @@ class KiaomiNetbook : Netbook
         this.Type = "Netbook";
         this.Model = "Mi Air";
         this.Price = 500;
-        this.Manifacturer = "Kiaomi";
+        this.Manufacturer = "Kiaomi";
         this.OperatingSystem = "Linux";
         this.ScreenSize = 14.0;
     }
