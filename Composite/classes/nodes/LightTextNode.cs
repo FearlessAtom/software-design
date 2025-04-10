@@ -1,6 +1,6 @@
 ﻿namespace Composite;
 
-class LightTextNode : LightNode
+public class LightTextNode : LightNode
 {
     public string Text { get; set; }
 

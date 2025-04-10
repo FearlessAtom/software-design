@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace Composite;
+﻿namespace Composite;
 
 class Program
 {

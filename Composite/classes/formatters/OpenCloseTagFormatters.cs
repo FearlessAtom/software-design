@@ -8,7 +8,7 @@ public class OpenCloseTagFormatter : TagFormatter
     {
         StringBuilder Result = new StringBuilder();
 
-        Result.Append($"{Gap}<{Node.TagName}>");
+        Result.Append($"{Gap}<{Node.NodeType.TagName}>");
 
         if (Node.Children.Count != 0)
         {
@@ -20,7 +20,7 @@ public class OpenCloseTagFormatter : TagFormatter
             Result.Append(Node.Children[i].GetOuterHTML(Gap + LightElementNode.Gap));
         }
 
-        Result.AppendLine($"{(Node.Children.Count == 0 ? "" : Gap)}<{Node.TagName}/>");
+        Result.AppendLine($"{(Node.Children.Count == 0 ? "" : Gap)}<{Node.NodeType.TagName}/>");
 
         return Result.ToString();
     }
