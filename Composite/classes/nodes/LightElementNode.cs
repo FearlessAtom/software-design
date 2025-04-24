@@ -7,12 +7,15 @@ public class LightElementNode : LightNode
     public List<LightNode> Children { get; set; }
     public List<string> ClassList { get; set; }
 
+    protected Dictionary<string, string> AttributeDictionary;
+
     public ElementNodeType NodeType { get; set; }
 
     public LightElementNode(string TagName="", TagFormatter? TagFormatter=null, string Display="block")
     {
         this.Children = new List<LightNode>();
         this.ClassList = new List<string>();
+        this.AttributeDictionary = new Dictionary<string, string>();
 
         if (TagFormatter == null)
         {
@@ -20,6 +23,11 @@ public class LightElementNode : LightNode
         }
 
         this.NodeType = new ElementNodeFactory().GetElementNodeType(TagName, Display, TagFormatter);
+    }
+
+    public Dictionary<string, string> GetAttributes()
+    {
+        return this.AttributeDictionary;
     }
 
     override public string GetOuterHTML(string CurrentGap="")
