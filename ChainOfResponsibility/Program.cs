@@ -11,7 +11,8 @@ class Program
             IHandler ExternalDevice = new ExternalDeviceHandler();
             IHandler AgentCall = new AgentCallHandler();
 
-            Harware.SetNext(Software); Software.SetNext(ExternalDevice);
+            Harware.SetNext(Software);
+            Software.SetNext(ExternalDevice);
             ExternalDevice.SetNext(AgentCall);
 
             bool IsIssueResolved = Harware.Handle();
