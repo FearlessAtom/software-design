@@ -39,5 +39,19 @@ class Program
         form.AppendChild(password);
 
         Console.Write(form.GetOuterHTML());
+
+        Console.WriteLine();
+
+        EventManager EventManager = new EventManager();
+
+        EventManager.Subscribe("mouseover", form);
+        EventManager.Subscribe("click", form);
+        EventManager.Subscribe("click", password_input);
+        EventManager.Subscribe("drag", title);
+        EventManager.Subscribe("drag", username);
+
+        EventManager.Notify("mouseover");
+        EventManager.Notify("click");
+        EventManager.Notify("drag");
     }
 }
