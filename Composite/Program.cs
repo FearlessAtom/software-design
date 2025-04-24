@@ -4,40 +4,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        LightElementNode form = new LightElementNode("form");
+        LightElementNode ImageContainer = new LightElementNode("div");
+        ImageContainer.ClassList.Add("container");
 
-        LightElementNode title = new LightElementNode("h2");
+        Image FirstImage = new Image();
+        FirstImage.SetHref("https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/NAVI-Logo.svg/640px-NAVI-Logo.svg.png");
+        FirstImage.LoadImage();
+        FirstImage.ClassList.Add("image");
+        ImageContainer.AppendChild(FirstImage);
 
-        title.AppendChild(new LightTextNode("Sign in"));
+        Image SecondImage = new Image();
+        SecondImage.SetHref("./images/navi.png");
+        SecondImage.LoadImage();
+        SecondImage.ClassList.Add("image");
+        ImageContainer.AppendChild(SecondImage);
 
-        form.AppendChild(title);
+        Console.WriteLine();
 
-        LightElementNode username= new LightElementNode("div");
-
-        LightElementNode username_input = new LightElementNode("input", new SelfClosingTagFormatter());
-        LightElementNode username_label = new LightElementNode("label");
-
-        LightTextNode username_label_text = new LightTextNode("Username");
-        username_label.AppendChild(username_label_text);
-
-        username.AppendChild(username_input);
-        username.AppendChild(username_label);
-
-        form.AppendChild(username);
-        
-        LightElementNode password = new LightElementNode("div");
-
-        LightElementNode password_input = new LightElementNode("input", new SelfClosingTagFormatter());
-        LightElementNode password_label = new LightElementNode("label");
-
-        LightTextNode password_label_text = new LightTextNode("Password");
-        password_label.AppendChild(password_label_text);
-
-        password.AppendChild(password_input);
-        password.AppendChild(password_label);
-
-        form.AppendChild(password);
-
-        Console.Write(form.GetOuterHTML());
+        Console.WriteLine(ImageContainer.GetOuterHTML());
     }
 }

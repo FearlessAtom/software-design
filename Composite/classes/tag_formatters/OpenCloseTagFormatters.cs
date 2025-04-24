@@ -8,7 +8,9 @@ public class OpenCloseTagFormatter : TagFormatter
     {
         StringBuilder Result = new StringBuilder();
 
-        Result.Append($"{Gap}<{Node.NodeType.TagName}>");
+        string Attributes = this.AttributeFormatter.Format(Node.GetAttributes(), Node.ClassList);
+
+        Result.Append($"{Gap}<{Node.NodeType.TagName}{(Attributes != "" ? " " :"")}{Attributes}>");
 
         if (Node.Children.Count != 0)
         {
